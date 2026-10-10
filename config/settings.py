@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     "django_filters",
 
     "apps.accounts",
-    "apps.categories",
+    "apps.Category",
     "apps.shoes",
 ]
 
