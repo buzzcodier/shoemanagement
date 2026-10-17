@@ -22,13 +22,16 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "drf_spectacular",
     "django_filters",
+    "corsheaders",
 
     "apps.accounts",
     "apps.Category",
     "apps.shoes",
+    "apps.sales",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",      # must be near the top
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -111,3 +114,10 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "Shoe Shop Management API",
     "VERSION": "1.0.0",
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+CORS_ALLOW_CREDENTIALS = True
