@@ -48,6 +48,12 @@ class SaleItem(models.Model):
     )
     quantity = models.PositiveIntegerField()
     unit_price = models.DecimalField(max_digits=10, decimal_places=2)
+    buying_price = models.DecimalField(          # ← NEW
+        max_digits=10,
+        decimal_places=2,
+        default=0,
+        help_text="The shoe's buying price at the time of sale — used for profit reports.",
+    )
     subtotal = models.DecimalField(max_digits=12, decimal_places=2, editable=False)
 
     def save(self, *args, **kwargs):

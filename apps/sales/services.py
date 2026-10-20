@@ -61,6 +61,7 @@ def create_sale(*, cashier, payment_method, items_data):
             shoe_variant=variant,
             quantity=quantity,
             unit_price=unit_price,
+            buying_price=variant.shoe.buying_price,     # ← NEW
         )
 
     sale.recalculate_total()

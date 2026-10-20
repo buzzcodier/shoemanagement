@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     "apps.Category",
     "apps.shoes",
     "apps.sales",
+    "apps.reports",
+    "apps.purchases",
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,6 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+# Reports / business rules
+LOW_STOCK_THRESHOLD = 5   # variants with quantity < this are "low stock"

@@ -22,9 +22,10 @@ class SaleItemSerializer(serializers.ModelSerializer):
             "size",
             "quantity",
             "unit_price",
+            "buying_price",
             "subtotal",
         ]
-        read_only_fields = ["subtotal"]
+        read_only_fields = ["subtotal", "buying_price"]
 
 
 class SaleSerializer(serializers.ModelSerializer):
