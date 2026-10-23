@@ -24,11 +24,10 @@ class ReadOrManagerPermission(IsManagerOrOwner):
 class ShoeCompanyViewset(viewsets.ModelViewSet):
     queryset = ShoeCompany.objects.all()
     serializer_class = ShoeCompanySerializer
-    permission_classes = [IsManagerOrOwner]
+    permission_classes = [ReadOrManagerPermission]      # was IsManagerOrOwner
     filter_backends = [SearchFilter, OrderingFilter]
     search_fields = ["name", "contact_person", "phone", "email"]
     ordering_fields = ["name", "created_at"]
-
 
 class ShoeViewset(viewsets.ModelViewSet):
     queryset = (

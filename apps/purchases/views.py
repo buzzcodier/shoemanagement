@@ -3,7 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
-from apps.accounts.permissions import IsManagerOrOwner
+from apps.accounts.permissions import IsManagerOrOwner 
 from .models import PackTemplate, Purchase, Supplier
 from .serializers import (
     PackTemplateSerializer,
