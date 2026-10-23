@@ -5,6 +5,9 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate
 
+# ⚠️ TEMPORARY — delete after one successful deploy
+python manage.py flush --no-input
+
 # Ensure superuser exists AND has role=OWNER
 python manage.py shell <<EOF
 from django.contrib.auth import get_user_model
